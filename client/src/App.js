@@ -2,21 +2,28 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import Login from './pages/Login';
-import SignUp from "./pages/SignUp";
+import {Container} from 'react-bootstrap'
+
+import Dashboard from './pages/Home'
+import NewUser from './pages/NewUser';
+import UpdateUser from "./pages/UpdateUser";
+
+import NavigationBar from './components/NavigationBar'
 
 
 function App() {
   return (
-	<Router>
-		<Routes>
-			<Route path="/" element={<Home/>} />
-			<Route path="/login" element={<Login/>}/>
-			<Route path="/sign-up" element={<SignUp/>} />
-			
-		</Routes>
-	</Router>
+	<Container>
+		<Router>
+			<Routes>
+				<Route path="/" element={<Dashboard/>} />
+				<Route path="/new-user" element={<NewUser/>}/>
+				<Route path="/update-user" element={<UpdateUser/>} />
+			</Routes>
+		</Router>
+	</Container>
+
+	
   );
 }
 

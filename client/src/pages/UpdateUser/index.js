@@ -1,8 +1,8 @@
 import React from "react";
 
-function SignUp() {
+function UpdateUser() {
         return (
 			  <h1>Sign Up</h1>
         );
       }
-      export default SignUp;
+      export default UpdateUser;
