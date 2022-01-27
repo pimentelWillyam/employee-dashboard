@@ -1,10 +1,16 @@
 import React from "react";
-import {Container} from 'react-bootstrap/';
 import {Link} from 'react-router-dom';
+
+import {Container} from 'react-bootstrap/';
+import
 
 function Dashboard() {
         return (
-			<h1>Home</h1>
+            <Container>
+              <Header></Header>
+            </Container>
+
+            <
         );
       }
-      export default Dashboard;
+export default Dashboard;
