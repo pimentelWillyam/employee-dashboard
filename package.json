@@ -1,5 +1,5 @@
 {
-  "name": "mern-crud",
+  "name": "employee-dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,20 +9,18 @@
     "express": "^4.17.2",
     "mongodb": "^4.3.1",
     "mongoose": "^6.2.1",
-    "nodemon": "^2.0.15",
-    "vite": "^2.7.13"
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node server/index.js",
-    "server": "nodemon server/index.js",
-    "client": "vite client/"
+    "server": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pimentelWillyam/employee-dashboard.git"
   },
-  "author": "",
+  "author": "Willyam Pimentel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pimentelWillyam/employee-dashboard/issues"
