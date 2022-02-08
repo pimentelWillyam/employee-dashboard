@@ -1,21 +1,24 @@
+import Table from 'react-bootstrap/Table';
 
-
-import {Table} from '../react-bootstrap'
+import InsertStudentButton from '../../components/InsertStudentButton'
 
 function StudentList(){
     return(
-        <Table striped hover>
-            <thead>
-                <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>E-mail</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </Table>
+        
+        <Table striped hover id="student-list">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>E-mail</th>
+            <th><InsertStudentButton></InsertStudentButton></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </Table>
     );
 }
 

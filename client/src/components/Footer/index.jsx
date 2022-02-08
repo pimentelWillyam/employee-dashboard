@@ -1,6 +1,11 @@
 
 function Footer(){
     return(
-        <h1>&copy Willyam Pimentel</h1>
+        <div className="footer">
+            © Willyam Pimentel
+        </div>
+        
     )
 }
+
+export default Footer
