@@ -77,7 +77,7 @@ app.patch('/employee/:id', async (req,res) =>{ // patches an employee by id
         }
 })
 
-app.delete('/employee/:id', async (req,res) => {
+app.delete('/employee/:id', async (req,res) => { // deletting user by name
         const id = req.params.id 
 
         const employee = await Employee.findOne({_id: id})
@@ -94,7 +94,7 @@ app.delete('/employee/:id', async (req,res) => {
         }
 })
 
-mongoose
+mongoose // database connection
         .connect('mongodb+srv://admin:admin@employee-dashboard.x2uej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
         .then(() => {
                 console.log('Conectou ao banco!')
