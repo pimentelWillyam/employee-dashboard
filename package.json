@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
-    "client": "vite "
+    "client": "vite client/"
   },
   "repository": {
     "type": "git",
