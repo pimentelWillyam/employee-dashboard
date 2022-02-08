@@ -98,7 +98,7 @@ mongoose
         .connect('mongodb+srv://admin:admin@employee-dashboard.x2uej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
         .then(() => {
                 console.log('Conectou ao banco!')
-                app.listen(3000)
+                app.listen(5000)
         })
         .catch((err) => console.log(err))
 
