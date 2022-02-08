@@ -4,22 +4,28 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
-    "mongodb": "^4.3.1"
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15",
+    "vite": "^2.7.13"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "vite "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pimentelWillyam/mern-crud.git"
+    "url": "git+https://github.com/pimentelWillyam/employee-dashboard.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pimentelWillyam/mern-crud/issues"
+    "url": "https://github.com/pimentelWillyam/employee-dashboard/issues"
   },
-  "homepage": "https://github.com/pimentelWillyam/mern-crud#readme"
+  "homepage": "https://github.com/pimentelWillyam/employee-dashboard#readme"
 }
