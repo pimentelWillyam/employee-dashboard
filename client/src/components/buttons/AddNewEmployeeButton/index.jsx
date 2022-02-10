@@ -10,6 +10,6 @@ function createEmployee(){
 
 export default function CreateEmployeeButton(){
     return (
-       <Link to = 'create-employee'> <Button id="add-new-employee-button" variant="success"  onClick={createEmployee}> <i class="bi bi-plus"></i> </Button> </Link> 
+       <Link to = 'create-employee'> <Button id="add-new-employee-button" variant="success"  onClick={createEmployee}> <i className="bi bi-plus"></i> </Button> </Link> 
     )
 }

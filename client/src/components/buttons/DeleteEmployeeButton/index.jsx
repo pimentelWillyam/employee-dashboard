@@ -4,6 +4,6 @@ function deleteEmployee (){
 
 export default function DeleteEmployeeButton(){
     return (
-        <Button id="create-employee-button" variant="danger"  onClick={deleteEmployee}> <i class="bi bi-gear-fill"></i> </Button>
+        <Button id="create-employee-button" variant="danger"  onClick={deleteEmployee}> <i className="bi bi-gear-fill"></i> </Button>
     )
 }

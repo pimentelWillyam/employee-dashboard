@@ -6,6 +6,6 @@ function updateEmployee(){
 
 export default function UpdateEmployeeButton(){
     return (
-        <Button id="update-employee-button" variant="Warning"  onClick={updateEmployee}> <i class="bi bi-gear-fill"></i> </Button>
+        <Button id="update-employee-button" variant="Warning"  onClick={updateEmployee}> <i className="bi bi-gear-fill"></i> </Button>
     )
 }
