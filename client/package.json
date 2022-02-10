@@ -3,12 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "client": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.1.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1"
   },

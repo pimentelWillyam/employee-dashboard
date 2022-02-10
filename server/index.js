@@ -97,7 +97,7 @@ app.delete('/employee/:id', async (req,res) => { // deletting user by name
 mongoose // database connection
         .connect('mongodb+srv://admin:admin@employee-dashboard.x2uej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
         .then(() => {
-                console.log('Conectou ao banco!')
+                console.log('Connection to the database has been established')
                 app.listen(5000)
         })
         .catch((err) => console.log(err))

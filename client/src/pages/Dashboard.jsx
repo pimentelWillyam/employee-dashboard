@@ -1,5 +1,16 @@
+import EmployeeDashboard from '../components/tables/EmployeeDashboard'
+import CreateEmployee from '../components/buttons/CreateEmployee'
+
+import {Container,
+        Table
+} from 'react-bootstrap'
+
 export default function Dashboard (){
     return (
-        <h1>Dashboard</h1>
+        <Container>
+            <EmployeeDashboard/>
+            <CreateEmployee/>
+        </Container>
+        
     )
 }
