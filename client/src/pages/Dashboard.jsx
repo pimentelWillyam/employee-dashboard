@@ -1,5 +1,5 @@
 import EmployeeDashboard from '../components/tables/EmployeeDashboard'
-import CreateEmployee from '../components/buttons/CreateEmployee'
+import AddNewEmployeeButton from '../components/buttons/AddNewEmployeeButton'
 
 import {Container,
         Table
@@ -9,7 +9,7 @@ export default function Dashboard (){
     return (
         <Container>
             <EmployeeDashboard/>
-            <CreateEmployee/>
+            <AddNewEmployeeButton/>
         </Container>
         
     )

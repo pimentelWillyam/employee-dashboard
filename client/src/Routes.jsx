@@ -1,4 +1,5 @@
 import Dashboard from './pages/Dashboard'
+import CreateEmployee from './pages/CreateEmployee'
 import UpdateEmployee from './pages/UpdateEmployee'
 
 
@@ -12,7 +13,9 @@ export default function AppRoutes () {
         <BrowserRouter>
         <Routes>
           <Route path = "/" element = {<Dashboard/>}/>
+          <Route path = "/create-employee" element = {<CreateEmployee/>}/>
           <Route path = "/update-employee" element = {<UpdateEmployee/>}/>
+
         </Routes>
       </BrowserRouter>
     )
