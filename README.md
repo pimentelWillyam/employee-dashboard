@@ -1,1 +1,1 @@
-# A Dashboard for keeping track of the employees of a company
+# A Dashboard for keeping track of the employees of a company, this project uses React and Bootstrap to build the front end while a restful API using Express works with a serverless MongoDB database at the backend
