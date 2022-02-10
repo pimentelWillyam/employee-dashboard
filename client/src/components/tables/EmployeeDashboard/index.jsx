@@ -4,16 +4,13 @@ import {Table,
         Button
 } from 'react-bootstrap'
 
-async function getAllEmployees(){
-    const response = await fetch('http://localhost:5000/employees')
-   const EmployeeList = await response.json()
-   return EmployeeList
-}
-
-
-
 export default function EmployeeDashboard (){
-    const [EmployeeList,setEmployeeList] = useState([])
+    async function getAllEmployees(){
+        const response = await fetch('http://localhost:5000/employees')
+       const employeeList = await response.json()
+       return employeeList
+    }
+    const [employeeList,setEmployeeList] = useState([getAllEmployees])
     return (
         <Table striped bordered hover>
             <thead>
@@ -24,9 +21,6 @@ export default function EmployeeDashboard (){
                 </tr>
             </thead>
             <tbody>
-                {EmployeeList.map(employee =>{
-                    return(<p>employee</p>)
-                })}
             </tbody>
         </Table>
     )    
