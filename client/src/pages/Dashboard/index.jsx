@@ -1,3 +1,5 @@
+import './style.css'
+
 import EmployeeDashboard from '../../components/tables/EmployeeDashboard'
 
 import {Link} from 'react-router-dom'
@@ -10,7 +12,7 @@ export default function Dashboard (){
     return (
         <Container>
             <EmployeeDashboard/>
-                <Link to ='/create-employee'><Button variant="success">Add employee</Button></Link>
+                <Link to ='/create-employee'><Button id="create-new-employee-button" variant="success"><i className="bi bi-plus"></i></Button></Link>
         </Container>
         
     )

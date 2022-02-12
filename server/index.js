@@ -25,13 +25,13 @@ app.post('/employee', async (req,res) =>{ // posts a new employee
         }
         try {
                 await Employee.create(employee)
-                res.status(201).json({message: 'Employee sucessfully inserted'})
+                res.status(201).json({message: 'Employee succesfully inserted'})
         } catch(error){
                 res.send(500).json({error: error})
         }
 })
 
-app.get('/employees', async (req,res) => { // get all employees
+app.get('/employee', async (req,res) => { // get all employees
         try{
                 const employee = await Employee.find()
                 res.status(200).json(employee)

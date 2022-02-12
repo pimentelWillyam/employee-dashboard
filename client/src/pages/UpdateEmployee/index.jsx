@@ -26,7 +26,7 @@ export default function UpdateEmployee () {
                     <Link to ='/'><Button variant="warning">Return</Button></Link>
                 </Col>
                 <Col>
-                    <Link to ='/'><Button variant="success">Update employee</Button></Link>
+                    <Link to ='/'><Button onClick={() => console.log("clicou")} variant="success">Update employee</Button></Link>
                 </Col>
             </Row>
         </Container>

@@ -6,11 +6,11 @@ import {Table,
 
 export default function EmployeeDashboard (){
     async function getAllEmployees(){
+        const [employeeList,setEmployeeList] = useState([[]])
         const response = await fetch('http://localhost:5000/employees')
-       const employeeList = await response.json()
-       return employeeList
+       setEmployeeList(response.json())
     }
-    const [employeeList,setEmployeeList] = useState([getAllEmployees])
+
     return (
         <Table striped bordered hover>
             <thead>
