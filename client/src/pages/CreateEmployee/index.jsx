@@ -2,7 +2,7 @@ import './style.css'
 
 import {useState} from 'react'
 
-import {Employee} from '../../api/employee/Employee'
+import {Employee} from '../../api/Employee'
 
 import {Link} from 'react-router-dom'
 
