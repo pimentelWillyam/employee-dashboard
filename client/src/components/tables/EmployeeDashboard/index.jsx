@@ -1,17 +1,21 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
+import {Employee} from '../../../api/Employee'
 
 import {Table,
         Button
 } from 'react-bootstrap'
 
 export default function EmployeeDashboard (){
-    async function getAllEmployees(){
-        const [employeeList,setEmployeeList] = useState([[]])
-        const response = await fetch('http://localhost:5000/employees')
-       setEmployeeList(response.json())
-    }
+    function getAllEmployees(){
+        let employeeList = Employee.getEmployees()
+        console.log(employeeList)
+        return employeeList
 
+    }   
+    getAllEmployees()
+    
     return (
+        
         <Table striped bordered hover>
             <thead>
                 <tr>
