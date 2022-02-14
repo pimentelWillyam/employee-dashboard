@@ -2,23 +2,20 @@ const url = "http://localhost:5000/employee"
 
 import axios from 'axios'
 
+
+
+
 export const Employee = {
 
-    async getEmployees() { // Make a request for all employee
-      
-      axios.get(url)
-      .then(function (response) {
-        // handle success
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      })
-      },
+  async getEmployees() {
+    try {
+      const response = await axios.get(url);
+      console.log(response);
+      return response.data
+    } catch (error) {
+      console.error(error);
+    }
+  },
       
 
     async getEmployeeById(id) { // Make a request for an especific employee
