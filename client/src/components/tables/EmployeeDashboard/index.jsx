@@ -6,12 +6,14 @@ import {Table,
 } from 'react-bootstrap'
 
 export default function EmployeeDashboard (){
-    async function getAllEmployees(){
-        let employeeList = await Employee.getEmployees()
-        let nEmployees = employeeList.length
-        console.log(`the array has ${nEmployees} members`)
-    }   
-    getAllEmployees()
+    let employeeList
+    async function hello(){
+        employeeList = await Employee.getEmployees()
+        for(let i=0;i<employeeList.length;i++){
+            console.log(employeeList[i])
+        }
+    }
+    hello()
     
     return (
         
