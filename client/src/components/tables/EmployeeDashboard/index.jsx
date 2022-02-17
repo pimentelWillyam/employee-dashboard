@@ -1,19 +1,23 @@
-import { useEffect } from 'react'
+import './style.css'
+
+import { useState,useEffect } from 'react'
+
 import {Employee} from '../../../api/Employee'
+import handleEmployeeDeletion from '../../../handlers/handleEmployeeDeletion'
 
 import {Table,
         Button
 } from 'react-bootstrap'
 
 export default function EmployeeDashboard (){
-    let employeeList
-    async function hello(){
-        employeeList = await Employee.getEmployees()
-        for(let i=0;i<employeeList.length;i++){
-            console.log(employeeList[i])
-        }
+    const [employeeList,setEmployeeList] = useState([])
+    const fetchData = async () => {
+        const data = await Employee.getEmployeeList()
+        setEmployeeList(data)
     }
-    hello()
+    fetchData()
+    useEffect(() =>{      
+    }, [employeeList])
     
     return (
         
@@ -26,6 +30,19 @@ export default function EmployeeDashboard (){
                 </tr>
             </thead>
             <tbody>
+                    {employeeList.map( (employee) =>{
+                        return(
+                            <tr key={employee.email}> 
+                                <th>{employee.name}</th>
+                                <th>{employee.email}</th>    
+                                <th>{employee.phone}</th>
+                                <th className="botoes"><Button variant ="danger" onClick={() => handleEmployeeDeletion(employee._id)}>Delete</Button>
+                                                        <Button variant = "warning">Update</Button>
+                                </th>
+                            </tr>
+             
+                        )
+                    })}
             </tbody>
         </Table>
     )    
