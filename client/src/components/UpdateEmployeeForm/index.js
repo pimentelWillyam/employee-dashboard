@@ -1,16 +1,7 @@
-import {Link} from 'react-router-dom'
 
-import {Container,
-    Row,
-    Col,
-    Button,
-    Form
-} from 'react-bootstrap'
 
-export default function UpdateEmployee ({id,name,email,phone}) {
-    const [name,setName] = useState(props.name)
-    const [email,setEmail] = useState(props.email)
-    const [phone,setPhone] = useState(props.phone)
+
+export default function UpdateEmployeeForm ({id,name,email,phone}) {
 
     return (
         <Container>
@@ -30,7 +21,7 @@ export default function UpdateEmployee ({id,name,email,phone}) {
                     <Link to ='/'><Button variant="warning">Return</Button></Link>
                 </Col>
                 <Col>
-                    <Link to ='/'><Button onClick={() => handleEmployeeUpdate(props.id,name,email,phone)} variant="success">Update employee</Button></Link>
+                    <Link to = {'/'}><Button id="update-employee-button" onClick={() => handleEmployeeUpdate(props.id)} variant="success">Update employee</Button></Link>
                 </Col>
             </Row>
         </Container>

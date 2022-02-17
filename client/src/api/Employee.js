@@ -7,7 +7,7 @@ import axios from 'axios'
 
 export const Employee = {
 
-  async getEmployeeList() {
+  async getEmployeeList() { // Make a request for all employee
     try {
       const response = await axios.get(url);
       return response.data
@@ -41,7 +41,7 @@ export const Employee = {
         }
       },
 
-      async UpdateEmployeeById(id,name,email,phone){
+      async UpdateEmployeeById(id,name,email,phone){ // updates an employee
           try{
             const response = await axios.patch(url, 
               { 
@@ -55,7 +55,7 @@ export const Employee = {
           }
       },
 
-      async deleteEmployeeById(id) { // Make a request for all employee
+      async deleteEmployeeById(id) { //deletes an employee
         try {
           const response = await axios.delete(url+"/"+id);
           console.log(response);

@@ -1,5 +1,7 @@
 import './style.css'
 
+import {Link} from 'react-router-dom'
+
 import { useState,useEffect } from 'react'
 
 import {Employee} from '../../api/Employee'
@@ -37,7 +39,7 @@ export default function EmployeeDashboard (){
                                 <th>{employee.email}</th>    
                                 <th>{employee.phone}</th>
                                 <th className="botoes"><Button variant ="danger" onClick={() => handleEmployeeDeletion(employee._id)}>Delete</Button>
-                                                        <Link><Button variant = "warning">Update</Button></Link>
+                                                        <Link to = {"update-employee/" + employee._id}> <Button variant = "warning">Update</Button> </Link>
                                 </th>
                             </tr>
              
