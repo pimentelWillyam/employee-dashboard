@@ -1,4 +1,11 @@
+import {useState} from 'react'
 
+import {Container,
+    Row,
+    Col,
+    Button,
+    Form
+} from 'react-bootstrap'
 
 
 export default function UpdateEmployeeForm ({id,name,email,phone}) {
@@ -21,7 +28,7 @@ export default function UpdateEmployeeForm ({id,name,email,phone}) {
                     <Link to ='/'><Button variant="warning">Return</Button></Link>
                 </Col>
                 <Col>
-                    <Link to = {'/'}><Button id="update-employee-button" onClick={() => handleEmployeeUpdate(props.id)} variant="success">Update employee</Button></Link>
+                    <Link to = {'/'}><Button id="update-employee-button" onClick={() => handleEmployeeUpdate(id)} variant="success">Update employee</Button></Link>
                 </Col>
             </Row>
         </Container>

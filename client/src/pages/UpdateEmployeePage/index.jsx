@@ -6,7 +6,7 @@ import {useParams} from 'react-router-dom'
 
 import {Employee} from '../../api/Employee'
 
-//import {UpdateEmployeeForm} from '../../components/UpdateEmployeeForm'
+import {UpdateEmployeeForm} from '../../components/UpdateEmployeeForm'
 
 import {Container,
     Row,
@@ -31,7 +31,7 @@ export default function UpdateEmployeePage () {
     console.log(employee)
     return (
         <Container>
-            <h1></h1>
+            <UpdateEmployeeForm id = {employee._id} name ={employee.name}  />
         </Container>
 
 
