@@ -28,10 +28,11 @@ export const Employee = {
 
     async postEmployee(name,email,phone) { // Posts an employee
         try {
-          const response = await axios.post(url, { 
-            name: name,
-            email: email,
-            phone: phone,
+          const response = await axios.post(url, 
+            { 
+              name: name,
+              email: email,
+              phone: phone,
             }
           )
           console.log(response);
@@ -40,8 +41,18 @@ export const Employee = {
         }
       },
 
-      async patchEmployeeById(id){
-          console.log("to do")
+      async UpdateEmployeeById(id,name,email,phone){
+          try{
+            const response = await axios.patch(url, 
+              { 
+                name: name,
+                email: email,
+                phone: phone,
+              }
+            )
+          }catch (error){
+            console.error(error)
+          }
       },
 
       async deleteEmployeeById(id) { // Make a request for all employee

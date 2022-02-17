@@ -1,6 +1,6 @@
 import './style.css'
 
-import EmployeeDashboard from '../../components/tables/EmployeeDashboard'
+import EmployeeDashboard from '../../components/EmployeeDashboard'
 
 import {Link} from 'react-router-dom'
 
