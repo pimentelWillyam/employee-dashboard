@@ -14,9 +14,7 @@ export default function AppRoutes () {
         <Routes>
           <Route path = "/" element = {<Dashboard/>}/>
           <Route path = "/create-employee" element = {<CreateEmployee/>}/>
-          <Route path = "/update-employee/:id" element = {<UpdateEmployee/>}>
-            <Route path = ""></Route>
-          </Route>
+          <Route path = "/update-employee/:id" element ={<UpdateEmployee/>}/>
         </Routes>
       </BrowserRouter>
     )

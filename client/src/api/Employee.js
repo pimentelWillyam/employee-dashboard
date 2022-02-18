@@ -21,6 +21,7 @@ export const Employee = {
         try {
           const response = await axios.get(url+'/'+id);
           console.log(response);
+          return response.data
         } catch (error) {
           console.error(error);
         }
@@ -43,13 +44,15 @@ export const Employee = {
 
       async UpdateEmployeeById(id,name,email,phone){ // updates an employee
           try{
-            const response = await axios.patch(url, 
+            const response = await axios.patch(url+"/"+id, 
               { 
                 name: name,
                 email: email,
                 phone: phone,
               }
             )
+            console.log(response)
+            return response
           }catch (error){
             console.error(error)
           }
