@@ -13,9 +13,9 @@ import {Container,
 
 
 export default function UpdateEmployeeForm ({id,name,email,phone}) {
-    const [updatedName,setUpdatedName] = useState('')
-    const [updatedEmail,setUpdatedEmail] = useState('')
-    const [updatedPhone,setUpdatedPhone] = useState('')
+    const [updatedName,setUpdatedName] = useState(name)
+    const [updatedEmail,setUpdatedEmail] = useState(email)
+    const [updatedPhone,setUpdatedPhone] = useState(phone)
     return (
         <Container>
             <br />

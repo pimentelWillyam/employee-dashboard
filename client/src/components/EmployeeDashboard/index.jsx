@@ -18,7 +18,32 @@ export default function EmployeeDashboard (){
         setEmployeeList(data)
     }
     fetchData()
-    useEffect(() =>{      
+    useEffect(() =>{
+        <Table striped bordered hover>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {employeeList.map( (employee) =>{
+                        return(
+                            <tr key={employee.email}> 
+                                <th>{employee.name}</th>
+                                <th>{employee.email}</th>    
+                                <th>{employee.phone}</th>
+                                <th className="botoes"><Button variant ="danger" onClick={() => handleEmployeeDeletion(employee._id)}>Delete</Button>
+                                                        <Link to = {"update-employee/" + employee._id}> <Button variant = "warning">Update</Button> </Link>
+                                </th>
+                            </tr>
+             
+                        )
+                    })}
+            </tbody>
+        </Table>
+
     }, [employeeList])
     
     return (
